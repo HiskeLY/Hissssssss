@@ -37,8 +37,8 @@
                 }
             }
             if (entropy < 0.15) {
-                document.querySelector('.no-button')?.textContent = "Wait... what?";
-                document.querySelector('.yes-button')?.textContent = "Huh??";
+                document.querySelector('.nee-button')?.textContent = "Wait... what?";
+                document.querySelector('.ja-button')?.textContent = "Huh??";
             }
             if (entropy < 0.1) {
                 let base = document.body;
@@ -46,31 +46,31 @@
                 base.style.fontSize = `${currSize * 0.97}px`;
             }
             if (entropy < 0.05) {
-                document.querySelector('.yes-button')?.removeEventListener("click", handleYes);
-                document.querySelector('.no-button')?.removeEventListener("click", handleNo);
+                document.querySelector('.ja-button')?.removeEventListener("click", handleJaaaa);
+                document.querySelector('.nee-button')?.removeEventListener("click", handleNee);
             }
         }, Math.random() * 20000 + 10000);
     }
 })();
 */
 const messages = [
-    "Are you sure?",
-    "Really sure??",
-    "Are you positive?",
-    "Pookie please...",
-    "Just think about it!",
-    "If you say no, I will be really sad...",
-    "I will be very sad...",
-    "I will be very very very sad...",
-    "Ok fine, I will stop asking...",
-    "Just kidding, say yes please! ❤️"
+    "Woowww werom klikst op nee??",
+    "Hiske hallo??",
+    "Pleaseee?",
+    "Ik hoar van dy!<3",
+    "Wist t seker?!",
+    "Wist t heeeeeel seker?",
+    "No got t te fier Hiske",
+    "Klik op ja aub",
+    "Oke ik stop wol",
+    "Tuurlijk net, klik op jaa please!"
 ];
 
 let messageIndex = 0;
 
 function handleNoClick() {
-    const noButton = document.querySelector('.no-button');
-    const yesButton = document.querySelector('.yes-button');
+    const noButton = document.querySelector('.nee-button');
+    const yesButton = document.querySelector('.ja-button');
     noButton.textContent = messages[messageIndex];
     messageIndex = (messageIndex + 1) % messages.length;
     const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
